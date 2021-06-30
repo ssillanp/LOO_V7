@@ -1,6 +1,8 @@
 package com.example.loo_v7;
 
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,15 +12,15 @@ import com.google.android.material.textfield.TextInputLayout;
 public class MainActivity extends AppCompatActivity {
 
     TextView text;
-    TextInputEditText intext;
-
+    EditText intext;
+    String lastxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         text = (TextView) findViewById(R.id.textView);
-        intext = (TextInputEditText) findViewById(R.id.textToUse);
+        intext = (EditText) findViewById(R.id.textToUse);
     }
 
 
@@ -26,4 +28,6 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Hello World!");
         text.setText(intext.getText());
     }
+
+
 }
